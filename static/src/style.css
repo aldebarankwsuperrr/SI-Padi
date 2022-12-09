@@ -1,0 +1,655 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins';
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: inline;
+}
+
+header img {
+    width: 400px;
+}
+
+.margin {
+    margin-left: 50px;
+}
+
+.jumbroton {
+    padding: 60px;
+    background: radial-gradient(circle at top left, #82CD47 , #379237);    
+    text-align: left;
+    color: white;
+    border-radius: 0 0 85% 85% / 30%;
+}
+.jumbroton button {
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #F0FF42;
+    border: none;
+    cursor: pointer;
+}
+
+.jumbroton button a {
+    text-decoration: none;
+    color: #395144;
+    font-weight: bold;
+}
+
+.jumbroton button:hover {
+    background-color: white;
+}
+
+.enter {
+    margin-top: 20px;
+}
+
+.flex {
+    flex-basis: 25%;
+}
+
+.double {
+    flex-basis: 50%;
+}
+
+.triple {
+    flex-basis: 75%;
+}
+
+.row {
+    display: flex;
+}
+
+.coloumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.justify {
+    justify-content: center;
+}
+
+.align {
+    align-items: center;
+}
+
+main {
+    padding: 20px;
+    overflow: auto;
+    margin-top: 40px;
+}
+
+.card {
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.box {
+    background-color: #54B435;
+    width: 300px;
+    height: 300px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 20px;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.boxXL {
+    background-color: #54B435;
+    width: 300px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 20px;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.image{
+    width: 150px;
+    margin-top: 50px;
+}
+
+.box button {
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.boxXL button {
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+
+}
+
+#btnKembali {
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+#btnKembali a {
+    text-decoration: none;
+    color: black;
+}
+
+#btnKembali2 a {
+    text-decoration: none;
+    color: black;
+}
+
+#btnKembali2 {
+    margin-top: 25px;
+    margin-left: 20px;
+}
+
+#btnPrediksi {
+    margin-top: 20px;
+    display: block;
+}
+
+#btnKamera {
+    margin-top: 20px;
+    margin-left: 300px;
+    display: block;
+}
+
+.box button:hover {
+    background-color: #F0FF42;
+}
+
+.boxXL button:hover {
+    background-color: #F0FF42;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.custom-file-upload {
+    background: radial-gradient(circle at top left, #FED049 , #F0FF42);    
+    display: inline-block;
+    cursor: pointer;
+    width: 700px;
+    margin-top: 20px;
+    border-radius: 30px;
+    color: black;
+    font-weight: bold;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.custom-file-upload .folder {
+    width: 100px;
+    margin-top: 7px;
+}
+
+.hasilUpload {
+    margin-top: 50px;
+    height: 300px;
+    margin-bottom: 40px;
+}
+
+.hasilUpload img {
+    width: 220px;
+    border: 2px solid #F0FF42;
+    border-radius: 20px;
+}
+
+.hasilUpload h4 {
+    font-size: 15px;
+}
+
+.pred {
+    background-color: #F0FF42;
+    color: black;
+    border-radius: 5px;
+}
+
+#loader {
+    width: 80px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+footer {
+    background: radial-gradient(circle at top left, #82CD47 , #379237);
+    margin-top: 80px;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.bottom {
+    margin-bottom: 80px;
+}
+
+
+.container {
+    perspective: 800px;
+}
+
+.cardName {
+    width: 290px;
+    height: 400px;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+}
+
+.container:hover > .cardName {
+    cursor: pointer;
+    transform: rotateY(180deg) rotateZ(180deg);
+}
+
+.front,
+.back {
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front {
+    background-image: url("../img/back.png");
+    padding-top: 100px;
+    /* background-color: red; */
+}
+
+.back {
+    padding-top: 100px;
+}
+
+.front img,
+.back img {
+    width: 150px;
+}
+
+.front h3 {
+    background-color: white;
+    border-radius: 20px;
+    width: 200px;
+    text-align: center;
+}
+
+.back h3 {
+    text-align: center;
+    background-color: white;
+    border-radius: 20px;
+    font-size: 15px;
+    width: 230px;
+}
+
+.back {
+    background-color: #82CD47;
+    transform: rotateY(180deg) rotateZ(180deg);
+}
+
+.formPenanganan img {
+    width: 250px;
+    border-radius: 20px;
+}
+
+.cardPenanganan {
+    width: 800px;
+    border-radius: 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background: radial-gradient(circle at top left, #FED049 , #F0FF42);
+    padding-top: 20px;   
+    margin-bottom: 30px; 
+}
+
+.formPenanganan h4,
+.formPenanganan p,
+.formPenanganan li {
+    color: black;
+    margin-left: 40px;
+}
+
+.formPenanganan p,
+.formPenanganan li {
+    font-size: 14px;
+    margin-top: -15px;
+    margin-right: 40px;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.formPenanganan ol {
+    margin-top: 5px;
+}
+
+
+
+
+/* .cardName {
+    width: 300px;
+    margin: 10px;
+    background-color: #54B435;
+    border-radius: 150px 150px 0 0;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cardName:hover{
+    background: radial-gradient(circle at top left, #82CD47 , #379237);
+}
+
+.cardName h3 {
+    margin-bottom: -20px;
+}
+
+.cardName img {
+    width: 120px;
+    margin-top: 20px;
+}
+
+.cardName p {
+    color: #F0FF42;
+}
+
+.sosmed {
+    background-color: white;
+    width: 270px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.sosmed i {
+    color: #379237;
+}
+
+.sosmed i:hover {
+    color: #F0FF42;
+}
+
+.margin-left {
+    margin-left: 35px;
+}
+
+.roww {
+    display: flex;
+} */
+
+
+@media screen and (max-width: 1000px) {
+    .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+    }
+
+    .justify {
+        align-items: center;
+    }
+    
+    header img {
+        width: 250px;
+    }
+
+    .jumbroton {
+        padding: 60px;
+        background: radial-gradient(circle at top left, #82CD47 , #379237);    
+        text-align: left;
+        color: white;
+        border-radius: 0 0 85% 85% / 10%;
+    }
+
+    .jumbroton h1 {
+        font-size: 25px;
+    }
+
+    .jumbroton p {
+        font-size: 13px;
+    }
+
+    .margin {
+        margin-left: 0px;
+    }
+
+    .box {
+        background-color: #54B435;
+        width: 300px;
+        margin-top: 20px;
+        border-radius: 20px;
+        color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+    
+    .boxXL {
+        background-color: #54B435;
+        width: 300px;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 20px;
+        color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .boxXL h2 {
+        font-size: 15px;
+    }
+
+    .image{
+        width: 150px;
+        margin-top: 30px;
+    }
+
+    .box button {
+        width: 200px;
+        height: 40px;
+        border-radius: 20px;
+        background-color: white;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 50px;
+    }
+
+    .box button:hover {
+        background-color: #F0FF42;
+    }
+    
+    .boxXL button:hover {
+        background-color: #F0FF42;
+    }
+
+    .custom-file-upload {
+        border: 2px solid #F0FF42;
+        display: inline-block;
+        cursor: pointer;
+        width: 270px;
+        margin-top: 20px;
+        border-radius: 30px;
+    }
+    
+    .custom-file-upload .folder {
+        width: 40px;
+        margin-top: 7px;
+    }
+    
+    .custom-file-upload p {
+        font-size: 13px;
+    }
+
+    #btnPrediksi,
+    #btnPenanganan {
+        width: 150px;
+        height: 30px;
+        border-radius: 20px;
+        background-color: white;
+        border: none;
+        cursor: pointer;
+        margin-top: 20px;
+        font-size: 13px;
+    }
+
+    #btnKamera {
+        width: 150px;
+        height: 30px;
+        border-radius: 20px;
+        background-color: white;
+        border: none;
+        cursor: pointer;
+        margin-left: 25px;
+        font-size: 13px;
+    }
+
+    #btnKembali {
+        margin-left: 20px;
+        margin-bottom: 20px;
+        font-size: 13px;
+        width: 150px;
+        height: 30px;
+        border-radius: 20px;
+        background-color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    .hasilUpload {
+        margin-bottom: 200px;
+    }
+
+    .hasilUpload img {
+        width: 200px;
+    }
+
+    .hasilUpload h4 {
+        font-size: 12px;
+    }
+
+    .hasilUpload {
+        margin-top: 50px;
+    }
+
+
+    footer {
+        background: radial-gradient(circle at top left, #82CD47 , #379237);
+        margin-top: 70px;
+        padding: 20px;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        font-size: 12px;
+    }    
+
+    .cardName {
+        width: 250px;
+        height: 350px;
+        position: relative;
+        transition: transform 1500ms;
+        transform-style: preserve-3d;
+        margin-top: 20px;
+    }
+    
+    .front {
+        background-image: url("../img/back.png");
+        padding-top: 80px;
+        /* background-color: red; */
+    }
+    
+    .back {
+        padding-top: 80px;
+    }
+    
+    .front img,
+    .back img {
+        width: 130px;
+    }
+    
+    .front h3 {
+        background-color: white;
+        border-radius: 20px;
+        width: 200px;
+        text-align: center;
+        font-size: 15px;
+    }
+    
+    .back h3 {
+        text-align: center;
+        background-color: white;
+        border-radius: 20px;
+        font-size: 15px;
+        width: 230px;
+    }
+    
+    #canvasVideo img {
+        width: 200px;
+    }
+
+    .formPenanganan img {
+        width: 150px;
+        border-radius: 20px;
+    }
+
+    .cardPenanganan {
+        width: 270px;
+        border-radius: 40px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        background: radial-gradient(circle at top left, #FED049 , #F0FF42);
+        padding-top: 20px;   
+        margin-bottom: 30px; 
+    }
+    
+    .formPenanganan h4,
+    .formPenanganan p,
+    .formPenanganan li {
+        color: black;
+        margin-left: 40px;
+    }
+    
+    .formPenanganan p,
+    .formPenanganan li {
+        font-size: 14px;
+        margin-top: -15px;
+        margin-right: 40px;
+        text-align: justify;
+        margin-bottom: 20px;
+    }
+    
+    .bold {
+        font-weight: bold;
+    }
+    
+    .formPenanganan ol {
+        margin-top: 5px;
+    }
+
+  }

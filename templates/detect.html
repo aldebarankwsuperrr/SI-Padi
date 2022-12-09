@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SI-PADI</title>
+    <link rel="stylesheet" href="../static/src/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <header>
+        <div class="jumbroton row justify align">
+            <div class="flex">
+                <img src="../static/img/SI-PADI.png" alt="Si-Padi">
+            </div>
+            <div class="flex double margin">
+                <h1>Sistem Informasi Deteksi Penyakit Tanaman Padi</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex corrupti necessitatibus architecto, non error in unde voluptatibus impedit soluta, quae eius voluptates saepe numquam amet veniam voluptas cum id laborum.</p>
+                <button><a href="#content">Cek Penyakit</a></button>
+            </div>
+        </div>
+    </header>
+
+    <main id="content">
+        <!-- Card -->
+        <div class="card coloumn"> 
+            <!-- Row -->
+            <div class="row justify bottom">
+                <!-- Box XL -->
+                <div class="boxXL triple fiturBox" id="boxForm">
+                    <!-- Loader -->
+                    <div class="loader hidden">
+                        <div class="coloumn justify align">
+                            <img src="../static/img/Spin-1s-200px.gif" alt="loader" id="loader">
+                        </div>
+                    </div>
+                    <!-- Batas Loader -->
+
+                    <!-- Camera -->
+                    <div class="formCamera">
+                        <div class="coloumn justify align">
+                            <h2>Live Camera</h2>
+                            <div class="visible" id="canvasVideo">
+                                <img src="{{ url_for('video_feed') }}" width="480">
+                            </div>
+                        </div>
+                        <form action = "/" method = "get" enctype="multipart/form-data">
+                            <button id="btnKembali">Kembali</button>
+                        </form>
+                    </div>
+                    <!-- Batas Camera -->
+                </div>
+                <!-- Batas Box XL -->
+            </div>
+            <!-- Batas Row -->
+        </div>
+        <!-- Batas Card -->
+    </main>
+
+    <footer>
+        <p>&copy; Copyright 2022 Sistem Informasi Deteksi Penyakit Tanaman Padi</p>
+    </footer>
+
+
+    <script src="../static/src/app.js"></script>
+
+</body>
+</html>

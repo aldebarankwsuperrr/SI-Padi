@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SI-PADI</title>
+    <link rel="stylesheet" href="../static/src/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <!-- Header -->
+    <header>
+        <!-- Jumbroton -->
+        <div class="jumbroton row justify align">
+            <div class="flex">
+                <img src="../static/img/SI-PADI.png" alt="Si-Padi">
+            </div>
+            <div class="flex double margin">
+                <h1>Sistem Informasi Deteksi Penyakit Tanaman Padi</h1>
+                <p>Hallo Farmer, Si-Padi merupakan sebuah website untuk membantu para Farmer mengidentifikasi penyakit pada tanaman padi. Penyakit padi yang diidentifikasi terdapat 3 jenis penyakit, antara lain Bacterial Leaf Blight, Brown Spot, dan Leaf Smut.</p>
+                <button><a href="#content">Cek Penyakit</a></button>
+            </div>
+        </div>
+        <!-- Batas Jumbroton -->
+    </header>
+    <!-- Batas Header -->
+
+    <!-- Main -->
+    <main id="content">
+        <!-- Card -->
+        <div class="card coloumn">
+            
+            <h1 class="judul">Pilih Fitur</h1>
+            <!-- Row -->
+            <div class="row justify bottom">
+                <!-- Box -->
+                <div class="box flex fitur">
+                    <div class="coloumn justify align">
+                        <img src="../static/img/upload.png" alt="" class="image">
+                        <button id="btnUpload">Upload Gambar</button>
+                    </div>
+                </div>
+                <!-- Batas Box -->
+                <!-- Box -->
+                <div class="box flex fitur">
+                    <div class="coloumn justify align">
+                        <img src="../static/img/camera.png" alt="" class="image">
+                        <!-- <form  class="form-inline" action = "/detect" method = "get" enctype="multipart/form-data"> -->
+                            <button id="btnLive">Live Camera</button>
+                        <!-- </form> -->
+                    </div>
+                </div>
+                <!-- Batas Box -->
+                
+                <!-- Box XL -->
+                <div class="boxXL triple hidden fiturBox" id="boxForm">
+                    <!-- Loader -->
+                    <div class="loader hidden">
+                        <div class="coloumn justify align">
+                            <img src="../static/img/Spin-1s-200px.gif" alt="loader" id="loader">
+                        </div>
+                    </div>
+                    <!-- Batas Loader -->
+
+                    <!-- Prediksi -->
+                    <div class="formPrediksi hidden">
+                        <div class="coloumn justify align">
+                            <h2>Masukan Gambar Untuk diPrediksi</h2>
+                            <form  class="coloumn justify align" action = "/predict" method = "post" enctype="multipart/form-data">
+                                <label class="custom-file-upload">
+                                    <div class="coloumn justify align">
+                                        <input type="file" name="file" class="file hidden" onchange="check(this);"/>
+                                        <img src="../static/img/folder.png" id="previewImg" alt="folder" class="folder">
+                                        <p>Masukan Gambar</p>
+                                    </div>
+                                </label>
+                                <button id="btnPrediksi">Prediksi</button>
+                            </form>
+                        </div>
+                        <form  class="form-inline" action = "/" method = "get" enctype="multipart/form-data">
+                            <button id="btnKembali">Kembali</button>
+                        </form>
+                    </div>
+                    <!-- Batas Prediksi -->
+                </div>
+                <!-- Batas Box XL -->
+            </div>
+            <!-- Batas Row -->
+        </div>
+        <!-- Batas Card -->
+
+        <!-- Card -->
+        <div class="card coloumn team">
+            <h1>Tim Penyusun</h1>
+            <!-- Row -->
+            <div class="row justify align">
+                <!-- Flex -->
+                <div class="flex">
+                    <div class="container">
+                        <div class="cardName">
+                            <div class="front">
+                                <div class="coloumn justify align">
+                                    <img src="../static/img/1.png" alt="">
+                                    <h3>Putra Dwi Wira G.Y</h3>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="coloumn justify align">
+                                    <img src="../static/img/upn.png" alt="">
+                                    <h3>UPN "Veteran" Jawa Timur</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Batas Flex -->
+                <!-- Flex -->
+                <div class="flex margin">
+                    <div class="container">
+                        <div class="cardName">
+                            <div class="front">
+                                <div class="coloumn justify align">
+                                    <img src="../static/img/2.png" alt="">
+                                    <h3>Fahrul Firmansyah</h3>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="coloumn justify align">
+                                    <img src="../static/img/upn.png" alt="">
+                                    <h3>UPN "Veteran" Jawa Timur</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Batas Flex -->
+                <!-- Flex -->
+                <div class="flex margin">
+                    <div class="container">
+                        <div class="cardName">
+                            <div class="front">
+                                <div class="coloumn justify align">
+                                    <img src="../static/img/3.png" alt="">
+                                    <h3>Aldo Valentino</h3>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="coloumn justify align">
+                                    <img src="../static/img/unair.png" alt="">
+                                    <h3>Universitas Airlangga</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Batas Flex -->
+            </div>
+            <!-- Batas Row -->
+        </div>
+        <!-- Batas Card -->
+    </main>
+    <!-- Batas Main -->
+
+    <footer>
+        <p>&copy; Copyright 2022 Sistem Informasi Deteksi Penyakit Tanaman Padi</p>
+    </footer>
+
+
+    <script src="../static/src/app.js"></script>
+
+</body>
+</html>

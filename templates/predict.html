@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SI-PADI</title>
+    <link rel="stylesheet" href="../static/src/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <header>
+        <div class="jumbroton row justify align">
+            <div class="flex">
+                <img src="../static/img/SI-PADI.png" alt="Si-Padi">
+            </div>
+            <div class="flex double margin">
+                <h1>Sistem Informasi Deteksi Penyakit Tanaman Padi</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex corrupti necessitatibus architecto, non error in unde voluptatibus impedit soluta, quae eius voluptates saepe numquam amet veniam voluptas cum id laborum.</p>
+                <button><a href="#content">Cek Penyakit</a></button>
+            </div>
+        </div>
+    </header>
+
+    <main id="content">
+        <!-- Card -->
+        <div class="card coloumn">
+            <!-- Row -->
+            <div class="row justify">
+                <!-- Box XL -->
+                <div class="boxXL triple visible fitur" id="boxForm">
+                    <!-- Loader -->
+                    <div class="loader hidden">
+                        <div class="coloumn justify align">
+                            <img src="../static/img/Spin-1s-200px.gif" alt="loader" id="loader">
+                        </div>
+                    </div>
+                    <!-- Batas Loader -->
+                    <!-- Prediksi -->
+                    <div class="formPrediksi">
+                        <!-- Coloumn -->
+                        <div class="coloumn justify align">
+                            <h2>Masukan Gambar Untuk diPrediksi</h2>
+                            <!-- Form -->
+                            <form class="coloumn justify align" action = "/predict" method = "post" enctype="multipart/form-data">
+                                <!-- Label -->
+                                <label class="custom-file-upload">
+                                    <div class="coloumn justify align">
+                                        <input type="file" class="file hidden" name="file" onchange="check(this);"/>
+                                        <img src="../static/img/folder.png" alt="folder" id="previewImg" class="folder">
+                                        <p>Masukan Gambar</p>
+                                    </div>
+                                </label>
+                                <!-- Batas Label -->
+                                <button id="btnPrediksi">Prediksi</button>    
+                            </form>
+                            <!-- Batas Form -->
+                            <!-- Hasil Upload -->
+                            <div class="hasilUpload">
+                                <!-- Row -->
+                                <div class="row justify align">
+                                    <div class="flex">
+                                        <img src="{{ user_image }}" alt="">
+                                    </div>
+                                    <div class="triple margin">
+                                        <h3>Hasil</h3>
+                                        <h4>Padi Anda Terkena : <span class="pred">{{fruit}}</span></h4>
+                                        <h4>Probabilitas : <span class="pred">{{prob}}</span></h4>
+                                        <button id="btnPenanganan">Lihat Penanganan</button>
+                                    </div>
+                                </div>
+                                <!-- Batas Row -->
+                            </div>
+                            <!-- Batas Hasil Upload -->
+                        </div>
+                        <!-- Batas Coloumn -->
+                        <!-- form -->
+                        <form action = "/" method = "get" enctype="multipart/form-data">
+                            <button id="btnKembali">Kembali</button>
+                        </form>
+                        <!-- Batas Form -->
+                    </div>
+                    <!-- Batas Prediksi -->
+                    <!-- Penanganan -->
+                    <div class="formPenanganan hidden">
+                        <div class="coloumn justify align">
+                            <h2>Penjelasan Penanganan Penyakit</h2>
+                            <div class="cardPenanganan coloumn">
+                                <div class="coloumn align">
+                                    <img src="../static/img/brownspot.jpg" alt="">
+                                </div>
+                                <h4>1. Brown Spot</h4>
+                                <p>Tanaman padi terkena penyakit Brown Spot biasa terjadi disebabkan oleh jamur yang bernama Cochiliobolus Miyabeanus. Jamur tersebut bisa bertahan hidup di dalam benih hingga selama 4 tahaun atau lebih serta bisa menyebar dari tanaman satu ke tanaman lainnya melalui spora yang ada di udara. Penyakit ini paling sering terjadi pada lahan dengan kesalahan pengelolaan kesuburan tanah, terutama dalam hal unsur hara mikro. Penggunaan pupuk silikon bisa digunakan untuk mengendalikan bercak coklat yang terdapat pada tanaman padi serta penggunaan campuran kotoran ternak dan pupuk kimia juga bisa mengurangi keparahannya.</p>
+                                <p><span class="bold">Langkah Pencegahan</span></p>
+                                <ol>
+                                    <li>Untuk Tanah yang rendah silikon, tambahkan arang kalsium silikat sebelum penanaman.</li>
+                                    <li>Dapatkan benih anda dari sumber yang bersertifikat jika memungkinkan</li>
+                                    <li>Tanam varietas yang tahan, jika tersedia di daerah anda</li>
+                                    <li>Pastikan pasokan unsur hara dan pantau unsur hara tanag secara teratur</li>
+                                    <li>Pantau tanda-tanda penyakit sejak tahap anakan</li>
+                                </ol>
+                                <p>Sumber Informasi : <a href="https://plantix.net/id/library/plant-diseases/100064/brown-spot-of-rice">link</a></p>
+                            </div>
+                            <div class="cardPenanganan coloumn">
+                                <div class="coloumn align">
+                                    <img src="../static/img/leaf.jpg" alt="">
+                                </div>
+                                <h4>2. Leaf Smut</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quia quo cumque fugiat, nostrum quod nobis delectus culpa odit? Corrupti nam natus necessitatibus corporis minima eum consequatur. Pariatur, dolorem culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum architecto reprehenderit ut in dolorum optio. Repudiandae quia minima beatae dolore sapiente. Temporibus nisi quod facere doloremque earum ad ipsa eum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas quae saepe sequi, qui iusto recusandae pariatur delectus enim labore, nobis, inventore praesentium minus fuga repellendus architecto? Quasi error itaque fuga. Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque inventore corporis vitae maiores quod, dolorem, enim dignissimos itaque officiis, error cum explicabo? Ratione eaque totam omnis rem, labore assumenda placeat!</p>
+                            </div>
+                            <div class="cardPenanganan coloumn">
+                                <div class="coloumn align">
+                                    <img src="../static/img/bacterial.jpg" alt="">
+                                </div>
+                                <h4>3. Bacterial Leaf Blight</h4>
+                                <p>Bacterial Leaf Blight atau hawar daun bakteri atau juga bisa disebut dengan penyakit kresek pada tanaman padi. Penyakit ini tersebar luas di pertanaman padi sawah serta bisa menyebabkan penurunan hasil panen hingga 36%. Penyakit kresek biasa terjadi pada saat musim penghujan atau dalam kondisi lembab dengan kelembaban > 75%, terutama dengan sawah yang selalu tergenang dengan pemupukan N yang tinggi. Bakteri yang menyebabkan penyakit ini yaitu bakteri Xanthomonas campestris pv. Oryzae Dye.</p>
+                                <p><span class="bold">Langah Penanganan</span></p>
+                                <ol>
+                                    <li>Sanitasi Lingkungan</li>
+                                    <li>Perbaikan cara bercocok tanam</li>
+                                    <li>Penyemprotan Bakterisida anjuran yang efektif dan diizinkan secara bijaksana berdasarkan hasil pengamatan</li>
+                                    <li>Pemanfaatan agensia hayati Corynebacterium</li>
+                                </ol>
+                                <p>Sumber Informasi : <a href="http://cybex.pertanian.go.id/mobile/artikel/81545/PENGENDALIAN-PENYAKIT-XANTHOMONAS--KRESEK-PADA-TANAMAN-PADI/">Link</a></p>
+                            </div>
+
+                        </div>
+                        <button id="btnKembali"><a href="/">Kembali</a></button>
+                    </div>
+                    <!-- Batas Peanganan -->
+                </div>
+                <!-- Batas Box XL -->
+            </div>
+            <!-- Batas Row -->
+        </div>
+        <!-- Batas Card -->
+    </main>
+
+
+    <footer>
+        <p>&copy; Copyright 2022 Sistem Informasi Deteksi Penyakit Tanaman Padi</p>
+    </footer>
+
+    <script src="../static/src/app.js"></script>
+    <script src="../static/src/predict.js"></script>
+
+</body>
+</html>
