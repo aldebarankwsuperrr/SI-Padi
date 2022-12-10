@@ -47,7 +47,7 @@ def predict():
             img = read_image(file_path)
             classes=model.predict(img) 
             index = np.argmax(classes)
-            return render_template('predict.html', fruit = label[index],prob=classes[0][index]*100, user_image = file_path)
+            return render_template('predict.html', fruit = label[index],prob=round(classes[0][index]*100,2), user_image = file_path)
         else:
             return render_template('index.html')
 
