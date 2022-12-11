@@ -7,4 +7,9 @@ SI-Padi merupakan suatu aplikasi yang dibuat untuk memudahkan pemindaian terhada
   pip install -r requirements.txt
  ```
  * And then run app.py
+ * copy this link on your browser
+  ```bash
+  http://127.0.0.1:8000
+ ```
+ 
  
