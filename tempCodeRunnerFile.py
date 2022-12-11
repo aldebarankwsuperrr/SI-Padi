@@ -1,1 +1,0 @@
-    leafCascade = cv2.CascadeClassifier("static/src/cascade.xml")
