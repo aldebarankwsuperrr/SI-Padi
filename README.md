@@ -1,3 +1,5 @@
+# GDrive Link
+https://drive.google.com/file/d/1l-o8bVA3Ehl6w_IIKAs6cNJnhFq7NzH_/view
 # capstone
 SI-Padi merupakan suatu aplikasi yang dibuat untuk memudahkan pemindaian terhadap tanaman padi yang terjangkit penyakit. Jenis penyakit-penyakit tersebut antara lain yaitu penyakit Brown Spot, Leaf Smut, Bacterial Leaf Blight.
 
@@ -11,5 +13,10 @@ SI-Padi merupakan suatu aplikasi yang dibuat untuk memudahkan pemindaian terhada
   ```bash
   http://127.0.0.1:8000
  ```
- 
+ # Meet Our Team
+| Name   | GitHub |
+| ------ | ----------- |
+| Fahrul Firmansyah | https://github.com/aldebarankwsuperrr |
+| Putra Dwi Wira G.D   |  https://github.com/PutraWiraG |
+| Aldo Valentino   | - |
  
