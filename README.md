@@ -22,5 +22,5 @@ https://www.youtube.com/watch?v=3Kgql6ACI3E
 | ------ | ----------- |
 | Fahrul Firmansyah | https://github.com/aldebarankwsuperrr |
 | Putra Dwi Wira G.D   |  https://github.com/PutraWiraG |
-| Aldo Valentino   | - |
+| Aldo Valentino   | https://github.com/AldoVal |
  
